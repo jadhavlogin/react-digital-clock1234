@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-import './DigitalClock.css';
+import './digitalClock.css';
 
 function DigitalClock() {
-  const [clockTime, setClockTime ] = useState(new Date());
+  const [clockTime, setClockTime] = useState(new Date());
 
   useEffect(() => {
     let timer = setInterval(() => updateClock(), 1000);
@@ -13,9 +13,7 @@ function DigitalClock() {
     setClockTime(new Date());
   }
 
-  return <div className="clockContainer">
-    {clockTime.toLocaleTimeString()}
-  </div>;
+  return <div className="clockContainer">{clockTime.toLocaleTimeString()}</div>;
 }
 
 export default DigitalClock;
